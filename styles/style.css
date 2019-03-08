@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+@import url('https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou');
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
+
+
+html {
+  box-sizing: border-box;
+}
+
+/************Small (Global)****/
+body {
+	color: #000000;
+	font-family: 'Railway', sans-serif;
+	font-size: 1em;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background-color: #005288;
+}
+
+h1 {
+	font-family: 'Raleway', sans-serif;
+	color: black;
+	display: inline-block;
+	font-size: 1em;
+	margin: 0;
+	margin-left: 40px;
+}
+
+
+.grid-container {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	height: 50px;
+	grid-gap: 10px;
+
+	grid-template-areas: 
+		"nav"
+		"digitaleklok"
+		"foot";
+}
+
+.grid-item {
+	margin: 5px 0px 5px 5px;
+}
+
+.box1 {
+	grid-area: nav;
+	background-color: #efefef;
+	height: 25px;
+	margin: 0;
+	padding: 24px;
+}
+
+.logo {
+	visibility: hidden;
+	height: 25px;
+	position: absolute;
+}
+
+.logoX {
+	visibility: visible;
+	height: 25px;
+	position: absolute;
+}
+
+.box2 {
+	grid-area: digitaleklok;
+	background-color: #efefef;
+	border-radius: 5px;
+	box-shadow: 2px 2px 5px black;
+	margin: 0 12px 0 12px;
+	padding: 24px;
+}
+
+#digitalDay {
+	font-family: 'Poiret One', cursive;
+	font-size: 30px;
+	text-align: center;
+}
+
+#digitalClock {
+	font-family: 'Audiowide', cursive;
+	font-size: 50px;
+	text-align: center;
+	text-shadow: 4px 3px 0px #fff, 
+				 9px 8px 0px rgba(0,0,0,0.15);
+}
+
+#digitalDate {
+	font-family: 'Poiret One', cursive;
+	font-size: 30px;
+	text-align: center;
+}
+
+
+.box3 {
+	grid-area: foot;
+	background-color: #efefef;
+	height: 25px;
+	margin: 0;
+	padding: 24px;
+}
+
+
+.logoXfoot {
+	visibility: visible;
+	position: absolute;
+	height: 25px;
+	transform: translate(0%, -40%)
+}
+
+
+
+/**********End Global (small)***/
+
+/************Small-Mid**************/
+@media only screen and (min-width: 470px) and (max-width: 719px) {
+
+
+
+
+
+
+
+}
+/************End Small-Mid**************/
+
+/************Mid**************/
+@media only screen and (min-width: 720px) and (max-width: 1023px) {
+
+.grid-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	height: 500px;
+	grid-gap: 10px;
+	margin: 0 auto;
+
+	grid-template-areas: 
+		"nav nav"
+		"digitaleklok digitaleklok"
+		"foot foot";
+}
+
+.box1 {
+	padding: 48px;
+}
+
+.logo {
+	visibility: visible;
+	height: 25px;
+	position: absolute;
+}
+
+.logoX {
+	visibility: hidden;
+	height: 25px;
+	position: absolute;
+}
+
+.box2 {
+	margin: 0;
+	padding: 48px;
+}
+
+
+#digitalDay {
+	font-size: 80px;
+}
+
+#digitalClock {
+	font-size: 110px;
+}
+
+#digitalDate {
+	font-size: 75px;
+}
+
+
+
+.box3 {
+	padding: 48px;
+}
+
+
+}
+
+/**********End Mid************/
+
+/***********Large*************/
+@media only screen and (min-width: 1024px) and (max-width: 1439px){
+
+.grid-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	height: 500px;
+	grid-gap: 10px;
+	margin: 0 auto;
+
+	grid-template-areas: 
+		"nav nav"
+		"digitaleklok digitaleklok"
+		"foot foot";
+}
+
+.box1 {
+	padding: 48px;
+}
+
+.logo {
+	visibility: visible;
+	height: 25px;
+	position: absolute;
+}
+
+.logoX {
+	visibility: hidden;
+	height: 25px;
+	position: absolute;
+}
+
+.box2 {
+	margin: 0;
+	padding: 48px;
+}
+
+#digitalDay {
+	font-size: 80px;
+}
+
+#digitalClock {
+	font-size: 150px;
+}
+
+#digitalDate {
+	font-size: 75px;
+}
+
+
+.box3 {
+	padding: 48px;
+}
+
+
+
+
+
+
+
+
+}
+/*********End Large***********/
+
+/************XL**************/
+@media only screen and (min-width: 1440px) {
+
+.grid-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	height: 500px;
+	grid-gap: 10px;
+	margin: 0 auto;
+	max-width: 1700px;
+
+	grid-template-areas: 
+		"nav nav nav"
+		"digitaleklok digitaleklok digitaleklok"
+		"foot foot foot";
+}
+
+.box1 {
+	padding: 48px;
+}
+
+.logo {
+	visibility: visible;
+	height: 25px;
+	position: absolute;
+}
+
+.logoX {
+	visibility: hidden;
+	height: 25px;
+	position: absolute;
+}
+
+.box2 {
+	margin: 0;
+	padding: 48px;
+}
+
+
+#digitalDay {
+	font-size: 95px;
+}
+
+#digitalClock {
+	font-size: 200px;
+}
+
+#digitalDate {
+	font-size: 100px;
+}
+
+
+}
+/**********End XL************/
+
+
+
+
+
+
+
+
+
