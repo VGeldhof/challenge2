@@ -119,13 +119,13 @@ function dagennacht() {
 
 function dagNachtIMG() {
 
-    if (hour > 10 && hour < 4) {
+    if (hour >= 22 && hour <= 4) {
           document.getElementById('dag_nacht').style.backgroundImage = 'url(img/starryNight.jpg)';
     }
-      else if (hour > 5 && hour < 10) {
+      else if (hour >= 5 && hour <= 10) {
           document.getElementById('dag_nacht').style.backgroundImage = 'url(img/dawn.jpg)';
       }
-      else if (hour > 11 && hour < 16) {
+      else if (hour >= 11 && hour <= 16) {
           document.getElementById('dag_nacht').style.backgroundImage = 'url(img/blueSky.jpg)';
       }
     else {
