@@ -11,17 +11,29 @@ var year = today.getFullYear();
 
 // Digitale klok
 
-function time() {
+function timeHours() {
   var today = new Date();
   var hour = today.getHours();
-  var minute = today.getMinutes();
-  var second = today.getSeconds();
-  minute = leadingZero(minute);
-  second = leadingZero(second);
-  document.getElementById('digitalClock').innerHTML = hour + ':' + minute + ':' + second;
-  var t = setTimeout(time, 500);
+  hour = leadingZero(hour);
+  document.getElementById('hoursClock').innerHTML = hour;
+  var t = setInterval('timeHours()', 1000);
 }
 
+function timeMinutes() {
+  var today = new Date();
+  var minute = today.getMinutes();
+  minute = leadingZero(minute);
+  document.getElementById('minutesClock').innerHTML = minute;
+  var t = setInterval('timeMinutes()', 1000);
+}
+
+function timeSeconds() {
+  var today = new Date();
+  var second = today.getSeconds();
+  second = leadingZero(second);
+  document.getElementById('secondsClock').innerHTML = second;
+  var t = setInterval('timeSeconds()', 1000);
+}
 
 
 function leadingZero(number) {
@@ -36,49 +48,149 @@ function leadingZero(number) {
 }
 
 // animatie klok
-
-function animationQ () {
-  var a = document.getElementById('digitalClock');
+function animationQHours() {
+  var a = document.getElementById('hoursClock');
   var tl1 = new TimelineMax();
   var mediaQ719 = window.matchMedia("(max-width: 719px)");
   var mediaQ1023 = window.matchMedia("(max-width: 1023px)");
   var mediaQ1439 = window.matchMedia("(max-width: 1439px)");
   
   if (mediaQ719.matches) { // If media query matches
-    tl1.to(digitalClock, 2, {
-            fontSize: 60, 
+    tl1.to(hoursClock, 1, {
+            fontSize: 55, 
           });
   }
 
   else if (mediaQ1023.matches) { // If media query matches
-    tl1.to(digitalClock, 1, {
-            fontSize: 135, 
+    tl1.to(hoursClock, 1, {
+            fontSize: 125, 
           });
   }
 
   else if (mediaQ1439.matches) { // If media query matches
-    tl1.to(digitalClock, 1, {
-            fontSize: 180, 
+    tl1.to(hoursClock, 1, {
+            fontSize: 155, 
           });
   }
 
   else { // If media query has a min-width of 1440px
-    tl1.to(digitalClock, 1, {
-            fontSize: 250, 
+    tl1.to(hoursClock, 1, {
+            fontSize: 230, 
           });
   }
 
 }
 
 
+function animationQMinutes() {
+  var a = document.getElementById('minutesClock');
+  var tl1 = new TimelineMax();
+  var mediaQ719 = window.matchMedia("(max-width: 719px)");
+  var mediaQ1023 = window.matchMedia("(max-width: 1023px)");
+  var mediaQ1439 = window.matchMedia("(max-width: 1439px)");
+  
+  if (mediaQ719.matches) { // If media query matches
+    tl1.to(minutesClock, 1, {
+            fontSize: 55, 
+          });
+  }
+
+  else if (mediaQ1023.matches) { // If media query matches
+    tl1.to(minutesClock, 1, {
+            fontSize: 125, 
+          });
+  }
+
+  else if (mediaQ1439.matches) { // If media query matches
+    tl1.to(minutesClock, 1, {
+            fontSize: 155, 
+          });
+  }
+
+  else { // If media query has a min-width of 1440px
+    tl1.to(minutesClock, 1, {
+            fontSize: 230, 
+          });
+  }
+
+}
+
+function animationQSeconds() {
+  var a = document.getElementById('secondsClock');
+  var tl1 = new TimelineMax();
+  var mediaQ719 = window.matchMedia("(max-width: 719px)");
+  var mediaQ1023 = window.matchMedia("(max-width: 1023px)");
+  var mediaQ1439 = window.matchMedia("(max-width: 1439px)");
+  
+  if (mediaQ719.matches) { // If media query matches
+    tl1.to(secondsClock, 1, {
+            fontSize: 55, 
+          });
+  }
+
+  else if (mediaQ1023.matches) { // If media query matches
+    tl1.to(secondsClock, 1, {
+            fontSize: 125, 
+          });
+  }
+
+  else if (mediaQ1439.matches) { // If media query matches
+    tl1.to(secondsClock, 1, {
+            fontSize: 155, 
+          });
+  }
+
+  else { // If media query has a min-width of 1440px
+    tl1.to(secondsClock, 1, {
+            fontSize: 230, 
+          });
+  }
+
+}
+
+function animationQPoint() {
+  var a = document.getElementsByClassName('dubbelePunt');
+  var tl1 = new TimelineMax();
+  var mediaQ719 = window.matchMedia("(max-width: 719px)");
+  var mediaQ1023 = window.matchMedia("(max-width: 1023px)");
+  var mediaQ1439 = window.matchMedia("(max-width: 1439px)");
+  
+  if (mediaQ719.matches) { // If media query matches
+    tl1.to(secondsClock, 1, {
+            fontSize: 55, 
+          });
+  }
+
+  else if (mediaQ1023.matches) { // If media query matches
+    tl1.to(secondsClock, 1, {
+            fontSize: 125, 
+          });
+  }
+
+  else if (mediaQ1439.matches) { // If media query matches
+    tl1.to(secondsClock, 1, {
+            fontSize: 155, 
+          });
+  }
+
+  else { // If media query has a min-width of 1440px
+    tl1.to(secondsClock, 1, {
+            fontSize: 230, 
+          });
+  }
+
+}
+
+
+
 function animationBounce() {
-  var b = document.getElementById('digitalClock');
+  var b = document.getElementById('secondsClock');
   
   var tl2 = new TimelineMax({repeat : -1});
 
-	tl2.call(time)
-			.from('#digitalClock', 0.3, { opacity: 0, y: -100, ease: Bounce.easeOut})
-			.to('#digitalClock', 0.7, { opacity: 1, y: 0});
+	tl2.call(timeSeconds)
+			.from('#secondsClock', 0.3, { opacity: 0, y: -100, ease: Bounce.easeOut})
+			.to('#secondsClock', 0.7, { opacity: 1, y: 0});
 
 }
 
@@ -187,9 +299,14 @@ var formatDay = days[today.getDay()];
 
 window.onload = function () {
   
-  time();
+  timeHours();
+  timeMinutes();
+  timeSeconds();
   leadingZero();
-  animationQ();
+  animationQHours();
+  animationQMinutes();
+  animationQSeconds();
+  animationQPoint();
   animationBounce();
   
   dagNachtIMG();

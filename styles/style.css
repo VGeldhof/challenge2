@@ -84,10 +84,44 @@ h1 {
 
 #digitalClock {
 	font-family: 'Audiowide', cursive;
-	font-size: 50px;
+/*	font-size: 50px;*/
 	text-align: center;
 	text-shadow: 4px 3px 0px #fff, 
 				 9px 8px 0px rgba(0,0,0,0.15);
+	margin: 0 auto;
+}
+
+.dubbelePunt {
+	display: inline-block;
+	font-size: 45px;
+}
+
+#hoursClock {
+	font-family: 'Audiowide', cursive;
+	font-size: 45px;
+	text-align: center;
+	text-shadow: 4px 3px 0px #fff, 
+				 9px 8px 0px rgba(0,0,0,0.15);
+	display: inline-block;
+}
+
+
+#minutesClock {
+	font-family: 'Audiowide', cursive;
+	font-size: 45px;
+	text-align: center;
+	text-shadow: 4px 3px 0px #fff, 
+				 9px 8px 0px rgba(0,0,0,0.15);
+	display: inline-block;
+}
+
+#secondsClock {
+	font-family: 'Audiowide', cursive;
+	font-size: 45px;
+	text-align: center;
+	text-shadow: 4px 3px 0px #fff, 
+				 9px 8px 0px rgba(0,0,0,0.15);
+	display: inline-block;
 }
 
 #digitalDate {
@@ -172,8 +206,21 @@ h1 {
 	font-size: 80px;
 }
 
-#digitalClock {
-	font-size: 110px;
+.dubbelePunt {
+	font-size: 100px;
+}
+
+#hoursClock {
+	font-size: 100px;
+}
+
+
+#minutesClock {
+	font-size: 100px;
+}
+
+#secondsClock {
+	font-size: 100px;
 }
 
 #digitalDate {
@@ -233,8 +280,21 @@ h1 {
 	font-size: 80px;
 }
 
-#digitalClock {
-	font-size: 150px;
+.dubbelePunt {
+	font-size: 140px;
+}
+
+#hoursClock {
+	font-size: 140px;
+}
+
+
+#minutesClock {
+	font-size: 140px;
+}
+
+#secondsClock {
+	font-size: 140px;
 }
 
 #digitalDate {
@@ -300,7 +360,20 @@ h1 {
 	font-size: 95px;
 }
 
-#digitalClock {
+.dubbelePunt {
+	font-size: 200px;
+}
+
+#hoursClock {
+	font-size: 200px;
+}
+
+
+#minutesClock {
+	font-size: 200px;
+}
+
+#secondsClock {
 	font-size: 200px;
 }
 
