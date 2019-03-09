@@ -303,13 +303,16 @@ window.onload = function () {
   timeMinutes();
   timeSeconds();
   leadingZero();
+
   animationQHours();
   animationQMinutes();
   animationQSeconds();
   animationQPoint();
+
   animationBounce();
   
   dagNachtIMG();
+  
   dagnachttekst();
   dagnachttekstdag();
   dagnachttekstdatum();
