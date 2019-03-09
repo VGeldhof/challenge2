@@ -73,13 +73,13 @@ function animationQ () {
 
 function animationBounce() {
   var b = document.getElementById('digitalClock');
+  
   var tl2 = new TimelineMax({repeat : -1});
-	tl2.call(time)
-			.from('#digitalClock', 0.7, { top: -100, ease: Bounce.easeOut})
-			.to('#digitalClock', 0.3, { opacity: 0});
 
-  // tl2.from(b, 2.5, {top:-100, ease: Bounce.easeOut})
-  // tl2.to(b, 2.5, {top: 200, ease: Bounce.easeOut});
+	tl2.call(time)
+			.from('#digitalClock', 0.3, { opacity: 0, y: -100, ease: Bounce.easeOut})
+			.to('#digitalClock', 0.7, { opacity: 1, y: 0});
+
 }
 
 
