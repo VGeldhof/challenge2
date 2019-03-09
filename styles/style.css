@@ -100,7 +100,7 @@ h1 {
 .box3 {
 	grid-area: foot;
 	background-color: #efefef;
-	height: 25px;
+	height: 20px;
 	margin: 0;
 	padding: 24px;
 }
